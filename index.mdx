@@ -160,11 +160,32 @@ func(...a);
 
 ---
 
-## Module
+export default Code;
 
-### import
+```javascript destructuring
+// array assignments
+const a = [1, 2, 3, 4, 5];
+const [x, y] = a;
+const [x_1, ...rest] = a;
+console.log(x, y);
+console.log(x_1, test);
 
-### and export
+// swap
+const b = 1;
+const c = 2;
+[b, c] = [c, b];
+console.log(b);
+console.log(c);
+
+// obj destructuring
+const props = { id: 1, name: "foo" };
+const { name } = props;
+console.log(name);
+```
+
+---
+
+## import/export
 
 -   [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Syntax)
 -   [export](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export#Syntax)
@@ -172,6 +193,50 @@ func(...a);
 ---
 
 ## Jest
+
+-   [Get started](https://jestjs.io/docs/en/getting-started.html)
+-   like Jasmine
+-   Snapshot Testing?
+
+---
+
+<CodeSurfer
+    title="Jest tests"
+    code={require("!raw-loader!./code/jest.js")}
+    lang="javascript"
+    showNumbers={true}
+    dark={false}
+    steps={[
+        { notes: "jest in time" },
+        {
+            lines: [3],
+            notes: "where all the magics happen"
+        },
+        { range: [5, 8], notes: "closer look, just like jasmine tests" }
+    ]}
+/>
+
+---
+
+<CodeSurfer
+    title="Jest snapshots"
+    code={require("!raw-loader!./code/snapshot.js")}
+    lang="javascript"
+    showNumbers={true}
+    dark={false}
+    steps={[
+        { notes: "sits under __snapshots__ folder" },
+        { range: [3, 7], notes: "would boil" },
+        { range: [15, 19], notes: "would not boil" }
+    ]}
+/>
+
+---
+
+## More?
+
+-   [enzyme](https://airbnb.io/enzyme/docs/guides/jest.html)
+-   Mocks
 
 ---
 
