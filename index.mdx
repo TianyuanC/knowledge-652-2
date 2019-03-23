@@ -104,14 +104,75 @@ import { CodeSurfer } from "mdx-deck-code-surfer";
 
 ---
 
+import Code from "mdx-code";
+
 ## ES6
 
--   spread/ rest
+-   spread/rest
 -   destructuring
--   import/ export
+-   module import/export
+
+---
+
+export default Code;
+
+```javascript spread
+// clone
+const a = [1, 2, 3];
+const clone = [...a];
+// aClone.push(4);
+// console.log(a);
+// console.log(clone);
+
+const b = { test: 1 };
+
+// concat
+const prev = [1, 2, 3];
+const next = [4, 5, 6];
+const complete = [...prev, ...next];
+
+// spread params
+const func = (one, two, three) => {
+    console.log(`inputs are ${one}, ${two} and ${three}`);
+};
+func(...a);
+```
+
+---
+
+export default Code;
+
+```javascript rest
+// args to array
+const a = [1, 2, 3];
+
+const func_prev = (one, two, three) => {
+    console.log(`inputs are ${one}, ${two} and ${three}`);
+};
+
+const func = (...args) => {
+    console.log(args);
+};
+
+func_prev(...a);
+func(...a);
+```
+
+---
+
+## Module
+
+### import
+
+### and export
+
+-   [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Syntax)
+-   [export](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export#Syntax)
 
 ---
 
 ## Jest
 
 ---
+
+## Until next time 👋
