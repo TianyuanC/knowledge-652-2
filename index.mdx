@@ -25,7 +25,7 @@ import { Appear } from "mdx-deck";
 
 -   [tc39/proposal-class-fields](https://github.com/tc39/proposal-class-fields#private-fields)
 -   [tc39 process](https://tc39.github.io/process-document/)
--   [TC39 ?](https://github.com/tc39)
+-   [hold on...tc39??](https://github.com/tc39)
 
 ---
 
@@ -66,13 +66,41 @@ import { CodeSurfer } from "mdx-deck-code-surfer";
 
 ## MyReads
 
+-   Bookmark [Rubric](https://review.udacity.com/#!/rubrics/918/view)
+-   Review steps in coding stage (Concept #6)
+-   Demo? 🙊
+
 ---
 
-## Life the state up
+## [Lifting state up](https://reactjs.org/docs/lifting-state-up.html)
 
 ---
 
-## setState
+## set State
+
+-   [setState](https://reactjs.org/docs/react-component.html#setstate)
+-   batching
+-   shallow update
+-   with prev state/props
+
+---
+
+<CodeSurfer
+    title="setState"
+    code={require("!raw-loader!./code/setstate.js")}
+    lang="javascript"
+    showNumbers={true}
+    dark={false}
+    steps={[
+        { notes: "setState closer look" },
+        { range: [3, 5], notes: "batching, only one render instead of 3" },
+        {
+            lines: [9],
+            notes: "this will overwrite state.c due to shallow merge"
+        },
+        { lines: [11], notes: "instead, we can do this to apply patches" }
+    ]}
+/>
 
 ---
 
