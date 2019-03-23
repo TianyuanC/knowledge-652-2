@@ -20,3 +20,21 @@ import { Appear } from "mdx-deck";
 </Appear>
 
 ---
+
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+<CodeSurfer
+    title="Private Class Fields"
+    code={require("!raw-loader!./code/private.js")}
+    lang="javascript"
+    showNumbers={true}
+    dark={false}
+    steps={[
+        { notes: "private class and methods in JS?" },
+        { lines: [2], notes: "Private Field" },
+        { range: [9, 11], notes: "Private Method" },
+        { range: [15, 16], notes: "Invalid invocations" }
+    ]}
+/>
+
+---
